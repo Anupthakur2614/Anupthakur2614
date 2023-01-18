@@ -69,6 +69,14 @@ func Cleanup(args sdk.Arguments) error {
 	log.Println("Cleanup has been finished!")
 	return nil
 }
+func Cleanup2(args sdk.Arguments) error {
+	log.Println("Cleanup2 has been started!")
+
+	// lets sleep to simulate that we do something
+	time.Sleep(5 * time.Second)
+	log.Println("Cleanup3 has been finished!")
+	return nil
+}
 
 func main() {
 	// Serve

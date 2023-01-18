@@ -44,6 +44,12 @@ var jobs = sdk.Jobs{
 		Handler:     Cleanup,
 		Title:       "Clean up",
 		Description: "Removes all temporary files.",
-		DependsOn:   []string{"Create K8S Deployment", "Create K8S Service", "Create K8S Ingress"},
+		DependsOn:   []string{"Create K8S Deployment"},
+	},
+	sdk.Job{
+		Handler:     Cleanup2,
+		Title:       "Clean up",
+		Description: "Removes all temporary files.",
+		DependsOn:   []string{"Create K8S Service", "Create K8S Ingress"},
 	},
 }
